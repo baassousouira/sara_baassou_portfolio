@@ -1,0 +1,63 @@
+
+/* RESET CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f0ec;
+  color: #252338;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* TYPOGRAPHIE */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* LIENS */
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+/* ACCESSIBILITÉ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
