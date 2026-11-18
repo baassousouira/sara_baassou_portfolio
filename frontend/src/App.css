@@ -381,3 +381,135 @@
     scroll-margin-top: 160px;
   }
 }
+
+
+/* SECTIONS PROJETS */
+
+.projects-section {
+  background-color: var(--color-cream);
+}
+
+.projects-section:nth-of-type(even) {
+  background-color: var(--color-background);
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-heading {
+  margin-bottom: 3rem;
+}
+
+.projects-eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+
+  color: var(--color-primary-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.projects-heading h2 {
+  font-family: var(--font-title);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-primary-dark);
+}
+
+/* GRILLE */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* CARTE */
+
+.project-card {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 24px;
+
+  background-color: var(--color-cream);
+  border: 1px solid rgba(95, 73, 138, 0.15);
+}
+
+.project-image {
+  aspect-ratio: 16 / 9;
+  background-color: #E8E1F2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-content {
+  padding: 2rem;
+}
+
+.project-card h3 {
+  color: var(--color-primary-dark);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  color: var(--color-primary);
+}
+
+/* TECHNOLOGIES */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-tags span {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* LIEN */
+
+.project-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-content {
+    padding: 1.5rem;
+  }
+}

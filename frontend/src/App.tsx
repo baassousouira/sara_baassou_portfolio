@@ -1,10 +1,12 @@
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/Aboutme';
+import ProjectsSection from './components/ProjectsSection';
 import './App.css';
 
 function App() {
-  return(
+  return (
     <>
       <Navbar />
 
@@ -13,34 +15,26 @@ function App() {
 
         <About />
 
-        <section id='informatique' className='section'>
-          <h2>Projet informatique</h2>
-          <ul>
-            <li>Jeu du labyrinthe</li>
-            <li>Jeu 2048 Python</li>
-            <li>Healthy Pet Java</li>
-          </ul>
-        </section>
+        <ProjectsSection
+          id="informatique"
+          title="Projets informatiques"
+          number="02"
+        />
 
-        <section id='design' className='section'>
-          <h2>Projets design</h2>
-          <ul>
-            <li>Viqthor</li>
-            <li>La paix au sport - Colombes</li>
-            <li>Mobotix</li>
-          </ul>
-        </section>
+        <ProjectsSection
+          id="design"
+          title="Projets design"
+          number="03"
+        />
 
-        <section id='personnels' className='section'>
-          <h2>Projets personnels</h2>
-          <ul>
-            <li>Dessins</li>
-            <li>Photos</li>
-          </ul>
-        </section>
+        <ProjectsSection
+          id="personnels"
+          title="Projets personnels"
+          number="04"
+        />
       </main>
     </>
-  )
+  );
 }
 
 export default App;
