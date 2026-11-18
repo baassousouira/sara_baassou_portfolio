@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
-import './App.css';
 import Hero from './components/Hero';
+import About from './components/Aboutme';
+import './App.css';
 
 function App() {
   return(
@@ -8,28 +9,9 @@ function App() {
       <Navbar />
 
       <main>
-        <Hero>
-        <section id="acceuil" className='section hero'>
-          <h1>Bienvenue dans mon monde hybride</h1>
-          <p>Entre ingénierie informatique et design global</p>
-        </section>
+        <Hero />
 
-        <section id='apropos' className='section'>
-          <h2>À propos de moi</h2>
-          <p>
-            Je suis passionnée par la programmation,
-            le design et les expériences numériques.
-          </p>
-
-          <h3>Compétences</h3>
-          <p>Programmation, design global, Suite Adobe</p>
-
-          <h3>Soft skills</h3>
-          <p>
-            Travail en équipe, écoute, flexibilité
-          et facilitation de groupe.
-          </p>
-        </section>
+        <About />
 
         <section id='informatique' className='section'>
           <h2>Projet informatique</h2>
@@ -56,7 +38,6 @@ function App() {
             <li>Photos</li>
           </ul>
         </section>
-        </Hero>
       </main>
     </>
   )
