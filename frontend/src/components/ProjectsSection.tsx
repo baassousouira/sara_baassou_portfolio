@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { projects } from '../data/projects';
 import type { Project } from '../data/projects';
@@ -14,9 +15,19 @@ function ProjectsSection({
   title,
   number,
 }: ProjectsSectionProps) {
+
+  const [selectedProject, setSelectedProject] =
+    useState<string | null>(null);
+
   const filteredProjects = projects.filter(
     (project) => project.category === id
   );
+
+  function toggleProject(projectId: string) {
+    setSelectedProject((previous) =>
+      previous === projectId ? null : projectId
+    );
+  }
 
   return (
     <section id={id} className="section projects-section">
@@ -35,6 +46,8 @@ function ProjectsSection({
             <ProjectCard
               key={project.id}
               project={project}
+              isExpanded={selectedProject === project.id}
+              onToggle={() => toggleProject(project.id)}
             />
           ))}
         </div>
