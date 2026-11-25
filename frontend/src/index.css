@@ -1,4 +1,23 @@
 
+/* IMPORT DES TYPOGRAPHIES */
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* VARIABLES GLOBALES */
+
+:root {
+  /* Palette */
+  --color-primary: #5F498A;
+  --color-primary-dark: #47356A;
+  --color-primary-light: #8872B5;
+  --color-background: #FEF9CD;
+  --color-cream: #FFFDF0;
+
+  /* Typographies */
+  --font-title: 'Italiana', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
 /* RESET CSS */
 
 * {
@@ -13,9 +32,9 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  font-family: Arial, sans-serif;
-  background-color: #f4f0ec;
-  color: #252338;
+  background-color: var(--color-cream);
+  color: var(--color-primary-dark);
+  font-family: var(--font-body);
 }
 
 #root {
@@ -31,16 +50,35 @@ h3 {
   margin-top: 0;
 }
 
+/* Titres principaux : Italiana (Sego temporaire) */
+
 h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1.1;
+}
+
+/* Titres secondaires : Montserrat uppercase */
+
+h2,
+h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 h2 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-p {
-  line-height: 1.6;
+/* Corps de texte : Montserrat */
+
+p,
+li {
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 /* LIENS */
